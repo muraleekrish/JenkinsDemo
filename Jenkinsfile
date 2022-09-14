@@ -1,1 +1,26 @@
-Created for Jenkins Demo
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Unit Test') {
+            steps {
+                echo 'Unit Test'
+            }
+        }
+        stage('Integration Test') {
+            steps {
+                echo 'Integration Test'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Deploy'
+            }
+        }
+    }
+}
